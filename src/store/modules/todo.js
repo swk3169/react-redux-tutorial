@@ -13,10 +13,19 @@ export const remove = createAction(REMOVE, id => id);
 
 let id = 0; // todo 아이템에 들어갈 고유 값
 
+// Record 함수는 Record 형태 데이터를 만드는 함수를 반환한다.
+// 따라서, 만든 다음에 뒤에 ()를 붙여줘야 데이터가 생성된다.
 const initialState = Map({
     input: '',
     todos: List()
 });
+
+// // Todo 아이템의 형식을 정한다.
+// const TodoRecord = Record({
+//     id: id++,
+//     text: '',
+//     checked: false
+// })
 
 export default handleActions({
     // 한줄짜리 코드로 반환 할 수 있는 경우엔 다음과 같이 블록 { } 를 생략 할 수 있다.
